@@ -40,6 +40,6 @@ print(code)
 
 
 local y = 1
-foo = function (x) return  (#x + x - y) .. "lol" end
+foo = function (x) return  #x + x - y .. "lol" end
 local code = lib.luadec(foo)
 print(code)
