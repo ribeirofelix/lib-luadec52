@@ -27,12 +27,12 @@ static int l_luadec(lua_State * L )
   char * code = ProcessCode(proto, 0);
   char * resp = (char*) malloc(strlen(code) + 12 ) ;
   //TODO : esse buffer aqui zoado :)
-  char buffer[10];
-  sprintf(buffer,"%d",funcCont);
-  strcpy(resp,"function _");
-  strcat(resp,buffer);
+  //char buffer[10];
+  //sprintf(buffer,"%d",funcCont);
+  strcpy(resp,"function ");
+  //strcat(resp,buffer);
   strcat(resp,code);
-  strcat(resp,"end");
+  strcat(resp," end");
   lua_pushstring(L, resp  );
   funcCont++;
   return 1;

@@ -1497,9 +1497,10 @@ char* ProcessCode(const Proto * f, int indent)
       case OP_MOD:
          {
             char *bstr, *cstr;
-            printf("%d\n", o);
+            //TODO: remove codigo debug
+           // printf("%d\n", o);
             char *oper = operators[o];
-            printf("operador: %s\n", oper);
+          //  printf("operador: %s\n", oper);
             int prio = priorities[o];
             int bprio = PRIORITY(b);
             int cprio = PRIORITY(c);
