@@ -1,3 +1,4 @@
+
 describe("Binary Expression Tests" , function ()
   
   local lib = require "luadec"
