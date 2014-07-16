@@ -91,7 +91,7 @@ describe("Binary Expression Tests" , function ()
       it("Bin op or ", function  ()
         foo = function (x) return x or x end
         local code = lib.luadec(foo)
-        print(code)
+       -- print(code)
 
         assert.True( foo(2) == assert(loadstring(wrap(code)) )() (2) )
       end)
@@ -130,13 +130,13 @@ describe("Unary Expression Tests", function ()
   end)
 
 
-describe("Table Constructors",function ()
-  it("Simple return ", function  ()
-    foo = function (x) return { a = x } end
-    local code = lib.luadec(foo)
-    print(code)
-    assert.True( foo(2).a == assert(loadstring(wrap(code)))()(2).a )
-  end)
-end)
+-- describe("Table Constructors",function ()
+--   it("Simple return ", function  ()
+--     foo = function (x) return { a = x } end
+--     local code = lib.luadec(foo)
+    
+--     assert.True( foo(2).a == assert(loadstring(wrap(code)))()(2).a )
+--   end)
+-- end)
 
 end)
